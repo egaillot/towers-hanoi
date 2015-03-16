@@ -15,5 +15,6 @@ def moveNPieces n, fromTo
 end
 
 def getSpareColumn fromTo
-  1
+  fromToColumns = fromTo.values
+  ([0, 1, 2] - fromToColumns).first
 end

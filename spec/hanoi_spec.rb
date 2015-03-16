@@ -13,3 +13,10 @@ describe "A solver for the Towers of Hanoi problem" do
       {from: 1, to: 2}]
   end
 end
+
+describe "getSpareColumn" do
+
+  it "finds out which column is neither source, nor destination" do
+    expect(getSpareColumn({from: 1, to: 2})).to eq 0
+  end
+end
