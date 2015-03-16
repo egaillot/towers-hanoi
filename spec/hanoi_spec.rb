@@ -12,6 +12,17 @@ describe "A solver for the Towers of Hanoi problem" do
       {from: 0, to: 2},
       {from: 1, to: 2}]
   end
+
+  it "can solve the problem for a stack of three pieces" do
+    expect(hanoi_solve 3).to eq [
+      {from: 0, to: 2},
+      {from: 0, to: 1},
+      {from: 2, to: 1},
+      {from: 0, to: 2},
+      {from: 1, to: 0},
+      {from: 1, to: 2},
+      {from: 0, to: 2}]
+  end
 end
 
 describe "getSpareColumn" do
