@@ -5,5 +5,8 @@ end
 def moveNPieces n, fromTo
   return [fromTo] if n == 1
 
-  [{from: 0, to: 1}, {from: 0, to: 2}, {from: 1, to: 2}]
+  from = fromTo[:from]
+  to = fromTo[:to]
+  spareColumn = 1
+  [{from: from, to: spareColumn}, {from: from, to: to}, {from: spareColumn, to: to}]
 end
