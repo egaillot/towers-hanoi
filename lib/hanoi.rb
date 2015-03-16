@@ -8,5 +8,8 @@ def moveNPieces n, fromTo
   from = fromTo[:from]
   to = fromTo[:to]
   spareColumn = 1
-  [{from: from, to: spareColumn}, {from: from, to: to}, {from: spareColumn, to: to}]
+
+  moveNPieces(n - 1, {from: from, to: spareColumn}) +
+    moveNPieces(1, {from: from, to: to}) +
+    moveNPieces(n - 1, {from: spareColumn, to: to})
 end
